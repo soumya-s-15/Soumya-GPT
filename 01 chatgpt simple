@@ -1,0 +1,13 @@
+import google.generativeai as genai
+
+# Configure API key
+genai.configure(api_key="AIzaSyCCcBxmCQaUnKkCVhkd54YhhpWCVjVjVyA")
+
+# Initialize the Gemini model
+model = genai.GenerativeModel("gemini-pro")
+
+# Generate response
+response = model.generate_content("Give me 3 ideas for apps I could build with Google Gemini APIs.")
+
+# Print the response
+print(response.text)
